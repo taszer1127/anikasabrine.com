@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showContent('about'); // Show the About section by default
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Personal Web Page</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showContent('about')">About</a>
+        <a href="#" onclick="showContent('works')">Works</a>
+        <a href="#" onclick="showContent('letters')">Letters</a>
+        <a href="#" onclick="showContent('contact')">Contact</a>
+    </nav>
+    <div class="container">
+        <div id="about" class="content active">
+            <h2>About Me</h2>
+            <p>Welcome to my personal web page! Here you can learn more about me, my works, and how to contact me.</p>
+        </div>
+        <div id="works" class="content">
+            <h2>My Works</h2>
+            <p>Here you'll find a collection of my recent works and projects.</p>
+        </div>
+        <div id="letters" class="content">
+            <h2>Letters</h2>
+            <p>Read some of my personal letters and correspondences.</p>
+        </div>
+        <div id="contact" class="content">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, you can reach me via email at <a href="mailto:email@example.com">email@example.com</a>.</p>
+        </div>
+    </div>
+    <footer>
+        &copy; Anika Sabrine
+    </footer>
+</body>
+</html>
