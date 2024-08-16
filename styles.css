@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #fff;
+    font-family: 'Dancing Script', cursive;
+    color: #4a4a4a;
+    background-color: #f4f4f9;
 }
 
 header {
-    background-color: #000;
+    background-color: #a29bfe; /* Lavender color */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -15,7 +15,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #000;
+    background-color: #a29bfe; /* Lavender color */
 }
 
 nav a {
@@ -26,7 +26,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #444;
+    background-color: #8e8df3; /* Slightly darker lavender */
 }
 
 .container {
@@ -44,7 +44,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #000;
+    background-color: #a29bfe; /* Lavender color */
     color: #fff;
     text-align: center;
     padding: 10px 0;
