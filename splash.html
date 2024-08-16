@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .splash-container {
+            text-align: center;
+        }
+        .fade-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+            transition: opacity 1s ease;
+        }
+        .fade-button:hover {
+            opacity: 0.8;
+        }
+        .fade {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .fade.in {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <h1>Welcome to Anika Sabrine's Website</h1>
+        <button class="fade-button" onclick="fadeOut()">Enter</button>
+    </div>
+    <script>
+        function fadeOut() {
+            const splashContainer = document.querySelector('.splash-container');
+            splashContainer.classList.add('fade');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1000); // Match this duration with the CSS transition time
+        }
+    </script>
+</body>
+</html>
