@@ -54,6 +54,14 @@
                 window.location.href = 'index.html'; // Redirect to the main page after fading out
             }, 1000); // Match this duration with the CSS transition time
         }
+
+        // Optional: You can use localStorage to prevent re-showing splash page on refresh
+        if (!localStorage.getItem('visited')) {
+            localStorage.setItem('visited', 'true');
+        } else {
+            // Redirect immediately if splash page was visited before
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>
