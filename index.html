@@ -51,16 +51,15 @@
             const splashContainer = document.querySelector('.splash-container');
             splashContainer.classList.add('fade');
             setTimeout(() => {
-                window.location.href = 'index.html'; // Redirect to the main page after fading out
+                window.location.href = 'main.html'; // Redirect to the main content page
             }, 1000); // Match this duration with the CSS transition time
         }
 
-        // Optional: You can use localStorage to prevent re-showing splash page on refresh
-        if (!localStorage.getItem('visited')) {
-            localStorage.setItem('visited', 'true');
+        // Optional: Store a flag in localStorage to skip splash page on future visits
+        if (localStorage.getItem('visited')) {
+            window.location.href = 'main.html';
         } else {
-            // Redirect immediately if splash page was visited before
-            window.location.href = 'index.html';
+            localStorage.setItem('visited', 'true');
         }
     </script>
 </body>
