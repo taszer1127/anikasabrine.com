@@ -19,11 +19,17 @@
         document.addEventListener('DOMContentLoaded', () => {
             showContent('about'); // Show the About section by default
         });
+
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
     </script>
 </head>
 <body>
     <header>
         <h1>Anika Sabrine</h1>
+        <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
     <nav>
         <a href="#" onclick="showContent('about')">About</a>
