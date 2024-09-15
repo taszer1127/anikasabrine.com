@@ -27,8 +27,23 @@
             nav.classList.remove('active');
         }
 
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            // Save user preference in localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             showContent('about'); // Show the About section by default
+
+            // Apply the saved theme from localStorage
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
         });
     </script>
 </head>
@@ -48,28 +63,34 @@
         <div id="about" class="content active">
             <h2>About Me</h2>
             <p>Welcome to my personal web page! Here you can learn more about me, my works, and how to contact me.</p>
+            <img src="path/to/your/image.jpg" alt="Description of Image" class="image">
         </div>
         <div id="works" class="content">
             <h2>My Works</h2>
             <div class="works-section">
                 <h3>Illustrations</h3>
+                <img src="path/to/your/illustrations-image.jpg" alt="Illustrations" class="image">
                 <p>Details about illustrations.</p>
             </div>
             <div class="works-section">
                 <h3>Animations</h3>
+                <img src="path/to/your/animations-image.jpg" alt="Animations" class="image">
                 <p>Details about animations.</p>
             </div>
             <div class="works-section">
                 <h3>Photography</h3>
+                <img src="path/to/your/photography-image.jpg" alt="Photography" class="image">
                 <p>Details about photography.</p>
             </div>
             <div class="works-section">
                 <h3>Fashion</h3>
+                <img src="path/to/your/fashion-image.jpg" alt="Fashion" class="image">
                 <p>Details about fashion.</p>
             </div>
         </div>
         <div id="letters" class="content">
             <h2>Letters</h2>
+            <img src="path/to/your/letters-image.jpg" alt="Letters" class="image">
             <p>Read some of my personal letters and correspondences.</p>
         </div>
         <div id="contact" class="content">
@@ -80,5 +101,7 @@
     <footer>
         &copy; Anika Sabrine. All Rights Reserved.
     </footer>
+    <!-- Toggle button for theme switch -->
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </body>
 </html>
