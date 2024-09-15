@@ -13,21 +13,33 @@ body {
 header {
     background-color: #a29bfe; /* Lavender color */
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 20px; /* Adjusted padding */
     text-align: center;
     position: relative;
+    display: flex;
+    justify-content: center; /* Center header content */
+    align-items: center; /* Vertically center content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
+header h1 {
+    margin: 0;
+    font-size: 1.5em; /* Adjusted font size */
+}
+
+/* Toggle button styles */
 .nav-toggle {
     display: none; /* Hidden by default, shown on mobile */
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
     background: none;
     border: none;
     color: #fff;
     font-size: 24px;
     cursor: pointer;
+    z-index: 10; /* Ensure it's above other content */
 }
 
 /* Navigation styles */
@@ -122,5 +134,13 @@ footer {
 
     .nav-toggle {
         display: block; /* Show the toggle button on mobile */
+    }
+
+    header {
+        padding: 10px; /* Adjust header padding for mobile */
+    }
+
+    header h1 {
+        font-size: 1.2em; /* Adjust font size for mobile */
     }
 }
