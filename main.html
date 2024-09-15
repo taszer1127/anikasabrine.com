@@ -6,30 +6,11 @@
     <title>Anika Sabrine</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        function showContent(contentId) {
-            const contents = document.querySelectorAll('.content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            document.getElementById(contentId).classList.add('active');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showContent('about'); // Show the About section by default
-        });
-
-        function toggleNav() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
-        }
-    </script>
 </head>
 <body>
     <header>
         <h1>Anika Sabrine</h1>
-        <button class="nav-toggle" onclick="toggleNav()">☰</button>
+        <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
     </header>
     <nav>
         <a href="#" onclick="showContent('about')">About</a>
@@ -47,19 +28,19 @@
             <h2>My Works</h2>
             <div class="works-section">
                 <h3>Illustrations</h3>
-                <p>Explore my illustration work, featuring various styles and techniques.</p>
+                <p>Details about illustrations.</p>
             </div>
             <div class="works-section">
                 <h3>Animations</h3>
-                <p>Check out my animations, showcasing dynamic and creative visuals.</p>
+                <p>Details about animations.</p>
             </div>
             <div class="works-section">
                 <h3>Photography</h3>
-                <p>View my photography portfolio, capturing moments and scenes from life.</p>
+                <p>Details about photography.</p>
             </div>
             <div class="works-section">
                 <h3>Fashion</h3>
-                <p>Discover my fashion work, including design and styling projects.</p>
+                <p>Details about fashion.</p>
             </div>
         </div>
         <div id="letters" class="content">
@@ -74,5 +55,23 @@
     <footer>
         &copy; Anika Sabrine. All Rights Reserved.
     </footer>
+    <script>
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        function toggleNav() {
+            document.querySelector('nav').classList.toggle('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showContent('about'); // Show the About section by default
+        });
+    </script>
 </body>
 </html>
