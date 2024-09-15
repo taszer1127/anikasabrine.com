@@ -19,11 +19,12 @@ body.dark-mode {
 header {
     background-color: #fff; /* Light mode background */
     color: #a29bfe; /* Lavender color for text */
-    padding: 20px;
+    padding: 10px 20px;
     position: relative;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for contrast */
+    font-size: 1.5em; /* Original size */
 }
 
 /* Dark mode header styles */
@@ -35,9 +36,8 @@ body.dark-mode header {
 
 /* Header title */
 header h1 {
-    font-size: 2em; /* Original size */
+    font-size: 1.5em; /* Original size */
     margin: 0;
-    color: #a29bfe; /* Lavender color for text */
 }
 
 /* Navigation styles */
@@ -140,8 +140,4 @@ body.dark-mode footer {
     background: #a29bfe; /* Lavender background for button */
     color: #000; /* Black text for button */
     border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5em;
-    z-index:
+    padding:
