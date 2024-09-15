@@ -38,6 +38,20 @@ body.dark-mode header {
 header h1 {
     font-size: 1.2em; /* Adjusted size for elegance */
     margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Navigation toggle button */
+.nav-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #a29bfe; /* Lavender color for text */
+    position: absolute;
+    right: 20px; /* Align with the right edge */
+    top: 20px; /* Align with the top edge */
 }
 
 /* Navigation styles */
@@ -75,6 +89,11 @@ nav a {
 nav a:hover {
     background-color: #333; /* Dark gray for hover background */
     color: #a29bfe; /* Lavender color for text */
+}
+
+/* Show nav when active */
+nav.active {
+    left: 0;
 }
 
 /* Container styles */
@@ -120,12 +139,5 @@ footer {
     background-color: transparent; /* Remove background color */
     color: #a29bfe; /* Lavender color for text */
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     position: relative;
-    width: 100%;
-    font-size: 0.8em;
-    opacity: 0.7;
-}
-
-/* Dark mode footer styles */
-body.dark-mode footer {
