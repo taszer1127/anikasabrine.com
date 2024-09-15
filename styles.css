@@ -14,24 +14,27 @@ header {
     background-color: #a29bfe; /* Lavender color */
     color: #fff;
     padding: 10px 20px; /* Adjusted padding */
-    text-align: center;
     position: relative;
     display: flex;
-    justify-content: center; /* Center header content */
-    align-items: center; /* Vertically center content */
+    align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
+/* Position and style of the header text */
 header h1 {
     margin: 0;
-    font-size: 1.5em; /* Adjusted font size */
+    font-size: 1.2em; /* Smaller font size */
+    opacity: 0.8; /* Lower opacity */
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Distance from top */
+    left: 20px; /* Distance from left */
 }
 
 /* Toggle button styles */
 .nav-toggle {
     display: none; /* Hidden by default, shown on mobile */
     position: absolute;
-    left: 20px;
+    right: 20px; /* Position to the right side */
     top: 50%;
     transform: translateY(-50%); /* Center vertically */
     background: none;
@@ -109,11 +112,13 @@ footer {
     background-color: #a29bfe; /* Lavender color */
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding */
     position: fixed;
     bottom: 0;
     width: calc(100% - 220px); /* Adjust width to account for the nav width */
     margin-left: 220px; /* Align footer with content */
+    font-size: 0.8em; /* Smaller font size */
+    opacity: 0.7; /* Lower opacity */
 }
 
 /* Mobile styles */
@@ -141,6 +146,12 @@ footer {
     }
 
     header h1 {
-        font-size: 1.2em; /* Adjust font size for mobile */
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    footer {
+        width: 100%; /* Full width on mobile */
+        margin-left: 0; /* Remove left margin */
+        font-size: 0.8em; /* Smaller font size on mobile */
     }
 }
