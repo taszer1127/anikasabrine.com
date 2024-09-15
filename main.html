@@ -6,11 +6,36 @@
     <title>Anika Sabrine</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.getElementById(contentId).classList.add('active');
+            closeNav(); // Close the navigation menu
+        }
+
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showContent('about'); // Show the About section by default
+        });
+    </script>
 </head>
 <body>
     <header>
         <h1>Anika Sabrine</h1>
-        <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+        <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
     <nav>
         <a href="#" onclick="showContent('about')">About</a>
@@ -55,23 +80,5 @@
     <footer>
         &copy; Anika Sabrine. All Rights Reserved.
     </footer>
-    <script>
-        function showContent(contentId) {
-            const contents = document.querySelectorAll('.content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            document.getElementById(contentId).classList.add('active');
-        }
-
-        function toggleNav() {
-            document.querySelector('nav').classList.toggle('active');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showContent('about'); // Show the About section by default
-        });
-    </script>
 </body>
 </html>
