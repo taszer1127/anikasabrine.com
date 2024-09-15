@@ -24,7 +24,7 @@ header {
     display: flex;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for contrast */
-    font-size: 1.5em; /* Original size */
+    font-size: 1.2em; /* Adjusted size for elegance */
 }
 
 /* Dark mode header styles */
@@ -36,7 +36,7 @@ body.dark-mode header {
 
 /* Header title */
 header h1 {
-    font-size: 1.5em; /* Original size */
+    font-size: 1.2em; /* Adjusted size for elegance */
     margin: 0;
 }
 
@@ -79,9 +79,9 @@ nav a:hover {
 
 /* Container styles */
 .container {
-    margin-left: 220px; /* Adjust to match nav width + some space */
+    margin-left: 200px; /* Adjust to match nav width */
     padding: 20px;
-    max-width: calc(100% - 220px);
+    max-width: calc(100% - 200px);
     flex: 1;
     color: #a29bfe; /* Lavender color for text */
 }
@@ -129,15 +129,3 @@ footer {
 
 /* Dark mode footer styles */
 body.dark-mode footer {
-    color: #a29bfe; /* Lavender color for text */
-}
-
-/* Toggle button styles */
-.theme-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #a29bfe; /* Lavender background for button */
-    color: #000; /* Black text for button */
-    border: none;
-    padding:
