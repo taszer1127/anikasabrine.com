@@ -60,10 +60,12 @@ nav {
     transition: left 0.3s ease; /* Smooth transition for sliding in */
 }
 
+/* Show navigation when active */
 nav.active {
     left: 0; /* Slide nav into view */
 }
 
+/* Navigation links */
 nav a {
     color: #fff;
     padding: 14px 20px;
@@ -72,6 +74,7 @@ nav a {
     display: block;
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
     background-color: #8e8df3; /* Slightly darker lavender */
 }
@@ -109,8 +112,8 @@ nav a:hover {
 
 /* Footer styles */
 footer {
-    background-color: #a29bfe; /* Lavender color */
-    color: #fff;
+    background-color: transparent; /* Remove the background color */
+    color: #a29bfe; /* Lavender color for the text */
     text-align: center;
     padding: 5px 0; /* Reduced padding */
     position: fixed;
@@ -123,6 +126,7 @@ footer {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+    /* Adjust navigation for mobile */
     nav {
         width: 100%;
         left: -100%; /* Hide nav off-screen */
