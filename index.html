@@ -8,7 +8,7 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Didot', serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,7 +21,7 @@
             color: white; /* Adjust text color for better readability on the GIF */
         }
         .fade-button {
-            background-color: #007bff;
+            background-color: #cf9df5;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -29,7 +29,7 @@
             cursor: pointer;
             border-radius: 5px;
             outline: none;
-            transition: opacity 1s ease;
+            transition: opacity 2s ease;
         }
         .fade-button:hover {
             opacity: 0.8;
@@ -45,8 +45,8 @@
 </head>
 <body>
     <div class="splash-container">
-        <h1>Welcome to Anika Sabrine's Website</h1>
-        <button class="fade-button" onclick="fadeOut()">Enter</button>
+        <h1>~hey this is anika sabrine~</h1>
+        <button class="fade-button" onclick="fadeOut()">:)</button>
     </div>
     <script>
         function fadeOut() {
@@ -57,11 +57,11 @@
             }, 1000); // Match this duration with the CSS transition time
         }
 
-        // Optional: Store a flag in localStorage to skip splash page on future visits
-        if (localStorage.getItem('visited')) {
+          // Check if user has visited before in this session
+        if (sessionStorage.getItem('visited')) {
             window.location.href = 'main.html';
         } else {
-            localStorage.setItem('visited', 'true');
+            sessionStorage.setItem('visited', 'true');
         }
     </script>
 </body>
