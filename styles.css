@@ -5,64 +5,65 @@ body {
     color: #4a4a4a;
     background-color: #f4f4f9;
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    position: relative;
 }
 
 /* Header styles */
 header {
     background-color: #a29bfe; /* Lavender color */
     color: #fff;
-    padding: 10px 20px; /* Adjusted padding */
+    padding: 10px 20px;
     position: relative;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Position and style of the header text */
 header h1 {
     margin: 0;
-    font-size: 1.2em; /* Smaller font size */
-    opacity: 0.8; /* Lower opacity */
-    position: absolute; /* Absolute positioning */
-    top: 10px; /* Distance from top */
-    left: 20px; /* Distance from left */
+    font-size: 1em; /* Smaller font size */
+    opacity: 0.8;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 /* Toggle button styles */
 .nav-toggle {
     display: none; /* Hidden by default, shown on mobile */
     position: absolute;
-    right: 20px; /* Position to the right side */
+    right: 20px;
     top: 50%;
-    transform: translateY(-50%); /* Center vertically */
+    transform: translateY(-50%);
     background: none;
     border: none;
     color: #fff;
     font-size: 24px;
     cursor: pointer;
-    z-index: 10; /* Ensure it's above other content */
+    z-index: 10;
 }
 
 /* Navigation styles */
 nav {
-    width: 200px; /* Adjust as needed */
+    width: 200px;
     background-color: #a29bfe; /* Lavender color */
     position: fixed;
     top: 0;
     left: -200px; /* Hide the nav by default */
     height: 100%;
-    padding-top: 60px; /* Ensure links aren't hidden under header */
+    padding-top: 60px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Align items vertically */
-    transition: left 0.3s ease; /* Smooth transition for sliding in */
+    flex-direction: column;
+    transition: left 0.3s ease;
 }
 
 /* Show navigation when active */
 nav.active {
-    left: 0; /* Slide nav into view */
+    left: 0;
 }
 
 /* Navigation links */
@@ -76,14 +77,15 @@ nav a {
 
 /* Hover effect for navigation links */
 nav a:hover {
-    background-color: #8e8df3; /* Slightly darker lavender */
+    background-color: #8e8df3;
 }
 
 /* Container styles */
 .container {
     margin-left: 220px; /* Adjust to match nav width + some space */
     padding: 20px;
-    max-width: calc(100% - 220px); /* Ensure the container does not overflow the page */
+    max-width: calc(100% - 220px);
+    flex: 1;
 }
 
 /* Content styles */
@@ -115,13 +117,11 @@ footer {
     background-color: transparent; /* Remove the background color */
     color: #a29bfe; /* Lavender color for the text */
     text-align: center;
-    padding: 5px 0; /* Reduced padding */
-    position: fixed;
-    bottom: 0;
-    width: calc(100% - 220px); /* Adjust width to account for the nav width */
-    margin-left: 220px; /* Align footer with content */
-    font-size: 0.8em; /* Smaller font size */
-    opacity: 0.7; /* Lower opacity */
+    padding: 5px 0;
+    position: relative;
+    width: 100%;
+    font-size: 0.8em;
+    opacity: 0.7;
 }
 
 /* Mobile styles */
@@ -150,7 +150,7 @@ footer {
     }
 
     header h1 {
-        font-size: 1em; /* Adjust font size for mobile */
+        font-size: 0.8em; /* Smaller font size on mobile */
     }
 
     footer {
