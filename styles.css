@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Dancing Script', cursive;
-    color: #4a4a4a;
-    background-color: #f4f4f9;
+    color: #a29bfe; /* Lavender color for text */
+    background-color: #000; /* Black background */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -11,13 +11,13 @@ body {
 
 /* Header styles */
 header {
-    background-color: #a29bfe; /* Lavender color */
-    color: #fff;
+    background-color: #000; /* Black background */
+    color: #a29bfe; /* Lavender color for text */
     padding: 10px 20px;
     position: relative;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Light shadow for contrast */
 }
 
 /* Position and style of the header text */
@@ -40,7 +40,7 @@ header h1 {
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: #fff;
+    color: #a29bfe; /* Lavender color for button */
     font-size: 24px;
     cursor: pointer;
     z-index: 10;
@@ -49,13 +49,13 @@ header h1 {
 /* Navigation styles */
 nav {
     width: 200px;
-    background-color: #a29bfe; /* Lavender color */
+    background-color: #000; /* Black background */
     position: fixed;
     top: 0;
     left: -200px; /* Hide the nav by default */
     height: 100%;
     padding-top: 60px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.2); /* Light shadow for contrast */
     display: flex;
     flex-direction: column;
     transition: left 0.3s ease;
@@ -68,17 +68,18 @@ nav.active {
 
 /* Navigation links */
 nav a {
-    color: #fff;
+    color: #a29bfe; /* Lavender color for text */
     padding: 14px 20px;
     text-decoration: none;
     font-weight: bold;
     display: block;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
 /* Hover effect for navigation links */
 nav a:hover {
-    background-color: #8e8df3;
+    background-color: #333; /* Dark gray for hover background */
+    color: #a29bfe; /* Lavender color for text */
 }
 
 /* Container styles */
@@ -87,6 +88,7 @@ nav a:hover {
     padding: 20px;
     max-width: calc(100% - 220px);
     flex: 1;
+    color: #a29bfe; /* Lavender color for text */
 }
 
 /* Content styles */
@@ -110,13 +112,13 @@ nav a:hover {
 
 .works-section p {
     font-size: 1em;
-    color: #4a4a4a;
+    color: #a29bfe; /* Lavender color for text */
 }
 
 /* Footer styles */
 footer {
-    background-color: transparent; /* Remove the background color */
-    color: #a29bfe; /* Lavender color for the text */
+    background-color: transparent; /* Remove background color */
+    color: #a29bfe; /* Lavender color for text */
     text-align: center;
     padding: 5px 0;
     position: relative;
