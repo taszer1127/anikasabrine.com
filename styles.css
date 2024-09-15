@@ -1,10 +1,14 @@
+/* General styles */
 body {
     margin: 0;
     font-family: 'Dancing Script', cursive;
     color: #4a4a4a;
     background-color: #f4f4f9;
+    display: flex;
+    min-height: 100vh;
 }
 
+/* Header styles */
 header {
     background-color: #a29bfe; /* Lavender color */
     color: #fff;
@@ -12,10 +16,18 @@ header {
     text-align: center;
 }
 
+/* Navigation styles */
 nav {
-    display: flex;
-    justify-content: center;
+    width: 200px; /* Adjust as needed */
     background-color: #a29bfe; /* Lavender color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 60px; /* Add padding-top to ensure links aren't hidden under header */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Align items vertically */
 }
 
 nav a {
@@ -23,32 +35,52 @@ nav a {
     padding: 14px 20px;
     text-decoration: none;
     font-weight: bold;
+    display: block;
 }
 
 nav a:hover {
     background-color: #8e8df3; /* Slightly darker lavender */
 }
 
+/* Container styles */
 .container {
+    margin-left: 220px; /* Adjust to match nav width + some space */
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: calc(100% - 220px); /* Ensure the container does not overflow the page */
 }
 
+/* Content styles */
 .content {
     display: none;
 }
 
-.active {
+.content.active {
     display: block;
 }
 
+/* Works section styles */
+.works-section {
+    margin-bottom: 20px;
+}
+
+.works-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.works-section p {
+    font-size: 1em;
+    color: #4a4a4a;
+}
+
+/* Footer styles */
 footer {
     background-color: #a29bfe; /* Lavender color */
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 100%;
+    width: calc(100% - 220px); /* Adjust width to account for the nav width */
+    margin-left: 220px; /* Align footer with content */
 }
