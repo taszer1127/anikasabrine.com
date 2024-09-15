@@ -6,6 +6,7 @@ body {
     background-color: #f4f4f9;
     display: flex;
     min-height: 100vh;
+    position: relative;
 }
 
 /* Header styles */
@@ -14,6 +15,19 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: relative;
+}
+
+.nav-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Navigation styles */
@@ -22,12 +36,17 @@ nav {
     background-color: #a29bfe; /* Lavender color */
     position: fixed;
     top: 0;
-    left: 0;
+    left: -200px; /* Hide the nav by default */
     height: 100%;
-    padding-top: 60px; /* Add padding-top to ensure links aren't hidden under header */
+    padding-top: 60px; /* Ensure links aren't hidden under header */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column; /* Align items vertically */
+    transition: left 0.3s ease; /* Smooth transition for sliding in */
+}
+
+nav.active {
+    left: 0; /* Slide nav into view */
 }
 
 nav a {
@@ -83,4 +102,25 @@ footer {
     bottom: 0;
     width: calc(100% - 220px); /* Adjust width to account for the nav width */
     margin-left: 220px; /* Align footer with content */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        left: -100%; /* Hide nav off-screen */
+    }
+    
+    nav.active {
+        left: 0; /* Slide nav into view */
+    }
+
+    .container {
+        margin-left: 0; /* Adjust container margin for mobile */
+        max-width: 100%; /* Ensure the container does not overflow the page */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button on mobile */
+    }
 }
