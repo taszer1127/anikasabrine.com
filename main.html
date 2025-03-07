@@ -5,51 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anika Sabrine</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        function showContent(contentId) {
-            const contents = document.querySelectorAll('.content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-            document.getElementById(contentId).classList.add('active');
-            closeNav(); // Close the navigation menu
-        }
-
-        function toggleNav() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
-        }
-
-        function closeNav() {
-            const nav = document.querySelector('nav');
-            nav.classList.remove('active');
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            // Save user preference in localStorage
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showContent('about'); // Show the About section by default
-
-            // Apply the saved theme from localStorage
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-mode');
-            }
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <button class="nav-toggle" onclick="toggleNav()">☰</button>
         <h1>Anika Sabrine</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">☆</button>
     </header>
     <nav>
         <a href="#" onclick="showContent('about')">Anika</a>
@@ -62,7 +25,7 @@
         <div id="about" class="content active">
             <h2>About Me</h2>
             <p>Welcome to my personal web page! Here you can learn more about me, my works, and how to contact me.</p>
-            <img src="C:\Users\tasne\Downloads\IMG_20240913_093832_257.heic" alt="Intro Pic" class="image">
+            <img src="path/to/your/image.jpg" alt="Intro Pic" class="image">
         </div>
         <div id="works" class="content">
             <h2>My Works</h2>
@@ -98,10 +61,8 @@
         </div>
     </div>
     <footer>
-        <button class="theme-toggle" onclick="toggleTheme()">☆</button>
         <p>&copy; Anika Sabrine. All Rights Reserved.</p>
     </footer>
-
     <!-- Background Music -->
     <audio id="background-music" src="https://www.example.com/path/to/your/free-music-file.mp3" autoplay loop>
         Your browser does not support the audio element.
