@@ -1,117 +1,51 @@
-/* General styles */
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-family: 'Dancing Script', cursive;
-    color: #a29bfe; /* Lavender color for text */
-    background-color: #fff; /* Default light mode background */
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    background: #f9f9f9;
+    transition: background-color 0.3s;
+    position: relative;
     min-height: 100vh;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #000; /* Dark mode background */
-    color: #a29bfe; /* Lavender color for text */
-}
-
-/* Header styles */
 header {
-    background-color: #fff; /* Light mode background */
-    color: #a29bfe; /* Lavender color for text */
-    padding: 10px 20px;
-    position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for contrast */
-    font-size: 1.2em; /* Adjusted size for elegance */
+    background: #333;
+    color: white;
+    padding: 10px 20px;
 }
 
-/* Dark mode header styles */
-body.dark-mode header {
-    background-color: #000; /* Dark mode background */
-    color: #a29bfe; /* Lavender color for text */
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Light shadow for contrast */
-}
-
-/* Header title */
-header h1 {
-    font-size: 1.2em; /* Adjusted size for elegance */
-    margin: 0;
-    flex-grow: 1;
-    text-align: center;
-}
-
-/* Navigation toggle button */
-.nav-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #a29bfe; /* Lavender color for text */
-    position: absolute;
-    right: 20px; /* Align with the right edge */
-    top: 20px; /* Align with the top edge */
-}
-
-/* Navigation styles */
 nav {
-    width: 200px;
-    background-color: #fff; /* Light mode background */
-    position: fixed;
-    top: 0;
-    left: -200px; /* Hide the nav by default */
-    height: 100%;
-    padding-top: 60px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Light shadow for contrast */
-    display: flex;
+    display: none;
     flex-direction: column;
-    transition: left 0.3s ease;
-}
-
-/* Dark mode navigation styles */
-body.dark-mode nav {
-    background-color: #000; /* Dark mode background */
-    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.2); /* Light shadow for contrast */
-}
-
-/* Navigation links */
-nav a {
-    color: #a29bfe; /* Lavender color for text */
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
-}
-
-/* Hover effect for navigation links */
-nav a:hover {
-    background-color: #333; /* Dark gray for hover background */
-    color: #a29bfe; /* Lavender color for text */
-}
-
-/* Show nav when active */
-nav.active {
+    align-items: center;
+    background: #444;
+    position: absolute;
+    width: 100%;
+    top: 50px;
     left: 0;
+    z-index: 10;
 }
 
-/* Container styles */
-.container {
-    margin-left: 200px; /* Adjust to match nav width */
-    padding: 20px;
-    max-width: calc(100% - 200px);
-    flex: 1;
-    color: #a29bfe; /* Lavender color for text */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
 }
 
-/* Dark mode container styles */
-body.dark-mode .container {
-    color: #a29bfe; /* Lavender color for text */
+nav a:hover {
+    background: #555;
 }
 
-/* Content styles */
+.nav-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .content {
+    padding: 20px;
     display: none;
 }
 
@@ -119,25 +53,41 @@ body.dark-mode .container {
     display: block;
 }
 
-/* Works section styles */
-.works-section {
-    margin-bottom: 20px;
+h1 {
+    font-family: 'Dancing Script', cursive;
 }
 
-.works-section h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+h2 {
+    font-weight: 500;
 }
 
-.works-section p {
-    font-size: 1em;
-    color: #a29bfe; /* Lavender color for text */
+img.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
-/* Footer styles */
 footer {
-    background-color: transparent; /* Remove background color */
-    color: #a29bfe; /* Lavender color for text */
+    background: #333;
+    color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.theme-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dark-mode {
+    background: #121212;
+    color: white;
+}
