@@ -3,66 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Welcome to Anika Sabrine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Didot', serif;
+            background: linear-gradient(135deg, #dff7f4, #fbe9e7);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('background.gif') no-repeat center center fixed;
-            background-size: cover; /* Ensure the GIF covers the whole page */
-        }
-        .splash-container {
             text-align: center;
-            color: white; /* Adjust text color for better readability on the GIF */
+            color: #114B23;
         }
-        .fade-button {
-            background-color: #cf9df5;
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            background-color: #114B23;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            border-radius: 10px;
             cursor: pointer;
-            border-radius: 5px;
-            outline: none;
-            transition: opacity 2s ease;
+            transition: background-color 0.3s ease;
         }
-        .fade-button:hover {
-            opacity: 0.8;
-        }
-        .fade {
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-        .fade.in {
-            opacity: 1;
+        button:hover {
+            background-color: #0e3a1b;
         }
     </style>
+    <script>
+        function redirectToMain() {
+            window.location.href = 'main.html';
+        }
+        setTimeout(redirectToMain, 5000);
+    </script>
 </head>
 <body>
-    <div class="splash-container">
-        <h1>~hey this is anika sabrine~</h1>
-        <button class="fade-button" onclick="fadeOut()">:)</button>
+    <div class="container">
+        <h1>Welcome to Anika Sabrine</h1>
+        <p>Your journey into creativity begins here.</p>
+        <button onclick="redirectToMain()">Enter Site</button>
     </div>
-    <script>
-        function fadeOut() {
-            const splashContainer = document.querySelector('.splash-container');
-            splashContainer.classList.add('fade');
-            setTimeout(() => {
-                window.location.href = 'main.html'; // Redirect to the main content page
-            }, 1000); // Match this duration with the CSS transition time
-        }
-
-          // Check if user has visited before in this session
-        if (sessionStorage.getItem('visited')) {
-            window.location.href = 'main.html';
-        } else {
-            sessionStorage.setItem('visited', 'true');
-        }
-    </script>
 </body>
 </html>
