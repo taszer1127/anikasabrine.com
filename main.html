@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anika Sabrine</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anika Sabrine - Creative Portfolio & Blog</title>
+    <meta name="description" content="Anika Sabrine - Creative professional showcasing illustrations, animations, photography, fashion design, and creative writing." />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <button class="nav-toggle" onclick="toggleNav()">☰</button>
-        <h1>Anika Sabrine</h1>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Anika Sabrine</h1>
+                <ul class="nav-links">
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <nav>
-        <a href="#" onclick="showContent('about')">Anika</a>
-        <a href="#" onclick="showContent('works')">Works</a>
-        <a href="#" onclick="showContent('letters')">Letters</a>
-        <a href="#" onclick="showContent('contact')">Contact</a>
-        <a href="newpage.html">New Page</a>
-    </nav>
-    <div class="container">
-        <div id="about" class="content active">
-            <h2>About Me</h2>
-            <p>Welcome to my personal web page! Here you can learn more about me, my works, and how to contact me.</p>
-            <img src="C:\Users\tasne\Downloads\IMG_20240913_093832_257.heic" alt="Intro Pic" class="image">
-        </div>
-        <div id="works" class="content">
-            <h2>My Works</h2>
-            <div class="works-section">
-                <h3>Illustrations</h3>
-                <img src="path/to/your/illustrations-image.jpg" alt="Illustrations" class="image">
-                <p>Details about illustrations.</p>
+    <main>
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <ul class="portfolio-list" id="portfolioList">
+                <!-- Portfolio list items dynamically rendered here -->
+            </ul>
+        </section>
+
+        <section id="blog" class="blog">
+            <h2 class="section-title">Blog</h2>
+            <div id="blogList">
+                <!-- Blog posts dynamically rendered here -->
             </div>
-            <div class="works-section">
-                <h3>Animations</h3>
-                <img src="path/to/your/animations-image.jpg" alt="Animations" class="image">
-                <p>Details about animations.</p>
-            </div>
-            <div class="works-section">
-                <h3>Photography</h3>
-                <img src="path/to/your/photography-image.jpg" alt="Photography" class="image">
-                <p>Details about photography.</p>
-            </div>
-            <div class="works-section">
-                <h3>Fashion</h3>
-                <img src="path/to/your/fashion-image.jpg" alt="Fashion" class="image">
-                <p>Details about fashion.</p>
-            </div>
-        </div>
-        <div id="letters" class="content">
-            <h2>Letters</h2>
-            <img src="path/to/your/letters-image.jpg" alt="Letters" class="image">
-            <p>Read some of my personal letters and correspondences.</p>
-        </div>
-        <div id="contact" class="content">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, you can reach me via email at <a href="mailto:anikasabrine@gmail.com">anikasabrine@gmail.com</a>.</p>
-        </div>
-    </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <p>I am Anika Sabrine, a creative professional passionate about telling stories through art, animation, photography, and design...</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name</label><br />
+                <input type="text" id="name" name="name" required /><br />
+                <label for="email">Email</label><br />
+                <input type="email" id="email" name="email" required /><br />
+                <label for="message">Message</label><br />
+                <textarea id="message" name="message" rows="5" required></textarea><br />
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
     <footer>
-        <button class="theme-toggle" onclick="toggleTheme()">☆</button>
-        <p>&copy; Anika Sabrine. All Rights Reserved.</p>
+        <p>&copy; 2024 Anika Sabrine. All rights reserved.</p>
     </footer>
-    <!-- Background Music -->
-    <audio id="background-music" src="https://www.example.com/path/to/your/free-music-file.mp3" autoplay loop>
-        Your browser does not support the audio element.
-    </audio>
+    <script src="script.js"></script>
 </body>
 </html>
