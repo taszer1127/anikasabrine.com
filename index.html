@@ -1,55 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Anika Sabrine</title>
-    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Didot', serif;
-            background: linear-gradient(135deg, #dff7f4, #fbe9e7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            color: #114B23;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        button {
-            margin-top: 2rem;
-            padding: 1rem 2rem;
-            font-size: 1.25rem;
-            background-color: #114B23;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #0e3a1b;
-        }
-    </style>
-    <script>
-        function redirectToMain() {
-            window.location.href = 'main.html';
-        }
-        setTimeout(redirectToMain, 5000);
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anika Sabrine — Creative Portfolio &amp; Blog</title>
+    <meta name="description" content="Anika Sabrine — illustration, animation, photography, fashion design and creative writing." />
+    <link rel="icon" type="image/png" href="assets/images/favicon-32.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Anika Sabrine</h1>
-        <p>Your journey into creativity begins here.</p>
-        <button onclick="redirectToMain()">Enter Site</button>
-    </div>
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-inner">
+                <a href="#hero" class="logo">Anika Sabrine</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Hello, I'm</p>
+                <h1 class="hero-title">Anika Sabrine</h1>
+                <p class="hero-tagline">Illustration &middot; Animation &middot; Photography &middot; Fashion Design &middot; Writing</p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary">View my work</a>
+                    <a href="#contact" class="btn btn-outline">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">A selection of recent creative work across mediums.</p>
+            <ul class="portfolio-list" id="portfolioList">
+                <!-- Portfolio list items dynamically rendered here -->
+            </ul>
+        </section>
+
+        <section id="blog" class="blog">
+            <h2 class="section-title">Blog</h2>
+            <p class="section-subtitle">Notes on process, inspiration, and craft.</p>
+            <div id="blogList">
+                <!-- Blog posts dynamically rendered here -->
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm Anika Sabrine, a multidisciplinary creative working across illustration, character animation, photography, fashion design, and writing. My practice sits at the intersection of storytelling and craft — I'm drawn to work that feels handmade even when it's digital, and to details that reward a second look.</p>
+                <p>Most projects start as a sketch or a stray sentence in a notebook. From there I move between mediums depending on what the idea needs: sometimes that's a fully rendered illustration, sometimes a short animated loop, sometimes a photograph, sometimes just words. I keep a running blog documenting the process behind the work, including the parts that don't make it into the final piece.</p>
+                <p>When I'm not making things, I'm usually looking at other people's — museum shows, indie animation, thrifted pattern books, anything with a strong point of view. Get in touch if you'd like to collaborate or commission something.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Anika Sabrine. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
